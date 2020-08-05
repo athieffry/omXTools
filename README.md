@@ -1,7 +1,7 @@
 # omXTools
 Collection of scripts for recurring omics-related analyses.
 
-- [samtobam.sh](omXTools/samtobam.sh)<br>
+- [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
 Converts a SAM alignment file into its binary sorted and indexed BAM version.
 ```
 USAGE: $ samtobam.sh [-hvk] [-p <int>] -i <input.sam>
