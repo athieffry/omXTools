@@ -35,7 +35,7 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 # read and parse arguments
-while getopts "i:p:kvh" opts
+while getopts ":i:p:kvh" opts
 	do
 	  case "$opts" in
 		i)
@@ -79,11 +79,14 @@ while getopts "i:p:kvh" opts
 		h)
 		  usage
 		  exit 0 ;;
-		*)
+		\?)
 		  echo "Invalid input/option/argument." >&2
 		  echo ""
 		  usage
 		  exit 1 ;;
+		:)
+		  echo "Invalid option: $OPTARG" >&2
+		  ;;
 	  esac
 	done
 
