@@ -1,7 +1,12 @@
 # omXTools
-### A collection of scripts for recurring omics-related analyses.
+A collection of scripts for recurring omics-related analyses.
 
-- [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
+### List of available scripts:
+   - samtobam
+   - velvet_stat_summarizer
+
+### Usage and details
+   - [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
 Converts a SAM alignment file into its binary sorted and indexed BAM version.
 ```
 USAGE: $ samtobam.sh [-hvk] [-p <int>] -i <input.sam>
