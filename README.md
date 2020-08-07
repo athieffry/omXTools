@@ -1,9 +1,9 @@
 # omXTools
 A collection of scripts for recurring omics-related analyses.
 
-### List of available scripts:
-   - samtobam
-   - velvet_stat_summarizer
+### List of tools:
+   - samtobam.sh
+   - velvet_stat_summarizer.sh
 
 ### Usage and details
    - [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
