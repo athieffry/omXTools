@@ -22,7 +22,8 @@ USAGE: $ samtobam.sh [-hvk] [-p <int>] -i <input.sam>
 ```
 
 - [velvet_stat_summarizer.sh](https://github.com/athieffry/omXTools/blob/master/velvet_stat_summarizer.sh)<br>
-Gathers main [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) de novo assembly stats into one convenient table.
+Gathers main [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) de novo assembly stats into one convenient table.<br>
+**Requires:** nproc (for Mac users, install nproc by running '_brew install coreutils_')
 ```
 SYNOPSIS
     velvet_stat_summarizer.sh [OPTIONS] directory_1 [directory_2 directory_3 ...]
