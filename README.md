@@ -7,7 +7,8 @@ A collection of scripts for recurring omics-related analyses.
 
 ### Usage and details
    - [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
-Converts a SAM alignment file into its binary sorted and indexed BAM version.
+Converts a SAM alignment file into its binary sorted and indexed BAM version.<br>
+**Requires:** samtools
 ```
 USAGE: $ samtobam.sh [-hvk] [-p <int>] -i <input.sam>
   -i     SAM input file.
@@ -30,4 +31,6 @@ DESCRIPTION
     of main assembly statistics gathered from the Log files. Assumes that directory
     names contain the sample and the k-mer length separated by underscore.
     For example: CEN.PK2_67.
+OPTIONS
+    -h   Show this help.
 ```
