@@ -34,6 +34,8 @@ Be sure to have enough disk space.
 Gathers main [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) de novo assembly stats into one convenient table.<br>
 **Requires:** nproc (for Mac users, install nproc by running '_brew install coreutils_')
 ```
+NAME
+    velvet_stat_summarizer.sh - summarizes main velvet de novo assembly stats
 SYNOPSIS
     velvet_stat_summarizer.sh [OPTIONS] directory_1 [directory_2 directory_3 ...]
 DESCRIPTION
