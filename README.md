@@ -10,15 +10,24 @@ A collection of scripts for recurring omics-related analyses.
 Converts a SAM alignment file into its binary sorted and indexed BAM version.<br>
 **Requires:** samtools
 ```
-USAGE: $ samtobam.sh [-hvk] [-p <int>] -i <input.sam>
-  -i     SAM input file.
-  -p     Specify the number of CPUs to be used (integer).
-         Default: detected by calling nproc.
-  -v     Enable verbose output to stdout.
-         Default: silent.
-  -k     Keep original SAM file.
-         Default: removes SAM file.
-  -h     Show this help.
+NAME
+    samtobam.sh - converts SAM into sorted and indexed BAM.
+SYNOPSIS"
+    samtobam.sh [-hvk] [-p <int>] -i <input.sam>
+DESCRIPTION
+    Takes a SAM alignment file and converts it into BAM format.
+    The resulting BAM is then sorted and indexed."
+OPTIONS
+    -i  SAM input file.
+    -p  Specify the number of CPUs to be used (integer).
+        Default: detected from system.
+    -v  Enable verbose output to stdout.
+        Default: silent.
+    -k  Keep original SAM file.
+        Default: removes SAM file.
+    -h  Show this help.
+Note: this script will create (temporary) intermediate files.
+Be sure to have enough disk space.
 ```
 
 - [velvet_stat_summarizer.sh](https://github.com/athieffry/omXTools/blob/master/velvet_stat_summarizer.sh)<br>
