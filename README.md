@@ -16,7 +16,7 @@ SYNOPSIS"
     samtobam.sh [-hvk] [-p <int>] -i <input.sam>
 DESCRIPTION
     Takes a SAM alignment file and converts it into BAM format.
-    The resulting BAM is then sorted and indexed."
+    The resulting BAM is then sorted and indexed.
 OPTIONS
     -i  SAM input file.
     -p  Specify the number of CPUs to be used (integer).
