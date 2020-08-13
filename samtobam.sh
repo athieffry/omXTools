@@ -156,13 +156,14 @@ fi
 samtools view -b $SAM -o $BAM -@ $CPU 2> /dev/null
 
 # 2. remove input.sam
-if [[ $VERBOSE -eq 1 ]]
-then
-	echo "Removing input SAM..."
-fi
-
 if [[ $KEEP -eq 0 ]]
 then
+	
+	if [[ $VERBOSE -eq 1 ]]
+	then
+		echo "Removing input SAM..."
+	fi
+	
 	echo "Deleting original $SAM file ..."
 	rm $INPUT
 fi
