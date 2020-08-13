@@ -150,10 +150,10 @@ SORTEDBAM=${INPUT%.*}.sorted.bam
 
 # 1. sam to bam
 if [[ $VERBOSE -eq 1 ]]
-	then echo "Converting SAM into BAM..."
+	then echo "Converting $SAM into $BAM ..."
 fi
 
-samtools view -b $SAM -o $BAM -@ $CPU
+samtools view -b $SAM -o $BAM -@ $CPU 2> /dev/null
 
 # 2. remove input.sam
 if [[ $VERBOSE -eq 1 ]]
@@ -163,25 +163,26 @@ fi
 
 if [[ $KEEP -eq 0 ]]
 then
+	echo "Deleting original $SAM file ..."
 	rm $INPUT
 fi
 
 # 3. sort and rename
 if [[ $VERBOSE -eq 1 ]]
 then
-	echo "Sorting and renaming BAM..."
+	echo "Sorting and renaming $BAM ..."
 fi
 
-samtools sort $BAM -l 9 -o $SORTEDBAM -@ $CPU
-mv $SORTEDBAM $BAM
+samtools sort $BAM -l 9 -o $SORTEDBAM -@ $CPU  2> /dev/null
+mv $SORTEDBAM $BAM  2> /dev/null
 
 # 4. index
 if [[ $VERBOSE -eq 1 ]]
 then
-	echo "Indexing BAM..."
+	echo "Indexing $BAM ..."
 fi
 
-samtools index $BAM -@ $CPU
+samtools index $BAM -@ $CPU  2> /dev/null
 
 if [[ $VERBOSE -eq 1 ]]
 then
