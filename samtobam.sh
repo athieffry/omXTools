@@ -150,7 +150,7 @@ SORTEDBAM=${INPUT%.*}.sorted.bam
 
 # 1. sam to bam
 if [[ $VERBOSE -eq 1 ]]
-	then echo "Converting $SAM into $BAM ..."
+	then echo "Converting $SAM into $BAM using $CPU cores..."
 fi
 
 samtools view -b $SAM -o $BAM -@ $CPU 2> /dev/null
