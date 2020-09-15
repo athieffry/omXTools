@@ -8,7 +8,7 @@ A collection of scripts for recurring omics-related analyses.
 ### Usage and details
    - [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
 Converts a SAM alignment file into its binary sorted and indexed BAM version.<br>
-**Requires:** samtools
+**Requires:** samtools, nproc (for Mac users, install nproc by running '_brew install coreutils_')
 ```
 NAME
     samtobam.sh - converts SAM into sorted and indexed BAM.
@@ -32,7 +32,6 @@ Be sure to have enough disk space.
 
 - [velvet_stat_summarizer.sh](https://github.com/athieffry/omXTools/blob/master/velvet_stat_summarizer.sh)<br>
 Gathers main [Velvet](https://www.ebi.ac.uk/~zerbino/velvet/) de novo assembly stats into one convenient table.<br>
-**Requires:** nproc (for Mac users, install nproc by running '_brew install coreutils_')
 ```
 NAME
     velvet_stat_summarizer.sh - summarizes main velvet de novo assembly stats
