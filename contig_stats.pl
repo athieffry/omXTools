@@ -23,8 +23,6 @@ if(defined($helpAsked)) { prtUsage(); exit; }
 if(!defined($file)) { prtError("No input provided"); }
 
 my ($fileName, $filePath) = fileparse($file);
-printf "%s\t%s\n", $fileName,$filePath ;
-
 
 open(I, "<$file") or die "Can not open file: $file\n";
 
