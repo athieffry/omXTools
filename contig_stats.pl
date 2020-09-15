@@ -20,9 +20,11 @@ GetOptions("i=s" => \$file,
 	   "h|help" => \$helpAsked );
 
 if(defined($helpAsked)) { prtUsage(); exit; }
-if(!defined($file)) { prtError("No input files are provided"); }
+if(!defined($file)) { prtError("No input provided"); }
 
 my ($fileName, $filePath) = fileparse($file);
+printf "%s\t%s\n", $fileName,$filePath ;
+
 
 open(I, "<$file") or die "Can not open file: $file\n";
 
@@ -66,8 +68,7 @@ my $n75 = calcN50(\@len, 75);
 my $n90 = calcN50(\@len, 90);
 my $n95 = calcN50(\@len, 95);
 
-
-printf "infile\tcontigs\tbases\tminlen\tmaxlen\tmeanlen\tmedianlen\tn50\tgc\tNs\n";
+printf "input_file\tcontigs\tbases\tminlen\tmaxlen\tmeanlen\tmedianlen\tn50\tgc\tNs\n";
 printf "%s\t%d\t%d\t%d\t%d\t%0.2f\t%d\t%d\t%0.2f\t%0.2f\n",
 $file,$totalReads,$bases,$minReadLen,$maxReadLen,$avgReadLen,$medianLen,$n50,$gc_content,$n_content ;
 
