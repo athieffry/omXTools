@@ -6,6 +6,14 @@ A collection of scripts for recurring omics-related analyses.
    - velvet_stat_summarizer.sh
 
 ### Usage and details
+   - [contig_stats.pl](https://github.com/athieffry/omXTools/blob/master/contig_stats.pl)<br>
+Summarize a collection of descriptive statistics for a FASTA file, typically for initial assessment of novo assemblies (contigs).
+Output to stdout is tab-delimited with columns for: input file, total number of sequences, total number of bases, a collection of sequence length stats (min/max/average/median/N50), GC% content, and N% content.<br>
+**Requires:** perl<br>
+(Initial script was found somewhere on the internet (source lost) and modified to handle several input files)<br>
+```
+Usage incoming soon
+```
    - [samtobam.sh](https://github.com/athieffry/omXTools/blob/master/samtobam.sh)<br>
 Converts a SAM alignment file into its binary sorted and indexed BAM version.<br>
 **Requires:** samtools, nproc (for Mac users, install nproc by running '_brew install coreutils_')
